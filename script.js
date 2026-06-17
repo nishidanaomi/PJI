@@ -10,6 +10,25 @@ btnMaisFotos.addEventListener('click', () => {
     document.body.style.overflow = 'hidden'; 
 });
 
+// Lógica do botão "voltar ao topo"
+const btnSubirTopo = document.getElementById('btnSubirTopo');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        btnSubirTopo.style.display = 'flex';
+    } else {
+        btnSubirTopo.style.display = 'none';
+    }
+});
+
+// Executa a rolagem suave para o topo ao clicar
+btnSubirTopo.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Efeito de subida suave
+    });
+});
+
 // Função para fechar clicando no "X"
 btnFecharModal.addEventListener('click', () => {
     modalImagens.style.display = 'none';

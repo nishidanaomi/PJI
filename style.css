@@ -11,6 +11,11 @@ body {
     background-color: #f7f9f6; /* tom levemente esverdeado/cinza, bem moderno */
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* evita que o header fixo cubra o conteúdo ao rolar */
+}
+
 /* --- HEADER --- */
 .main-header {
     display: flex;
@@ -24,10 +29,21 @@ body {
     z-index: 10;
 }
 
-.main-header h1 {
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-title {
     font-size: 1.3rem;
-    color: #2e7d32; /* Vvrde botânico institucional */
+    color: #2e7d32;
     font-weight: 700;
+}
+
+/* Menu Web começa escondido no Mobile */
+.header-nav {
+    display: none; 
 }
 
 /* tamanhos pré-moldados para os logos não quebrarem o layout */
@@ -140,6 +156,31 @@ body {
     font-size: 0.85rem;
 }
 
+/* --- BOTÃO VOLTAR AO TOPO --- */
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: none; /* Escondido por padrão via JS */
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.btn-top:hover {
+    background-color: #2e7d32;
+}
+
 /* --- MODAL DA GALERIA (SOBREPOSIÇÃO) --- */
 .modal {
     display: none; /* escondido por padrão */
@@ -197,30 +238,77 @@ body {
 
 /* --- ADAPTAÇÃO PARA WEB (TELAS MAIORES) --- */
 @media (min-width: 768px) {
+    
     .main-header {
         padding: 15px 50px;
+        display: flex !important;
+        justify-content: space-between !important; 
+        align-items: center !important;
     }
-    .main-header h1 {
-        font-size: 1.8rem;
+    
+    .header-left {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 12px; 
+        flex: 0.1;
+        justify-content: flex-start;
     }
+    
+    .project-title {
+        font-size: 1.6rem;
+    }
+
+    .header-nav {
+        display: flex !important;
+        gap:50px;
+        flex: 9;
+        justify-content: space-around;
+    }
+    
+    .header-nav a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s, transform 0.2s;
+        white-space: nowrap;
+    }
+    
+    .header-nav a:hover {
+        color: #2e7d32;
+        transform: translateY(-1px); /* Leve efeito visual moderno ao passar o mouse */
+    }
+    
+    /* Bloco Direito: Força o logo do campus a ocupar a ponta extrema direita */
+    .logo-right {
+        display: block !important;
+        flex: 1; /* Ocupa 1/3 do espaço disponível na direita */
+        object-position: right; /* Alinha o conteúdo da imagem totalmente à direita */
+    }
+
+    /* Configuração vertical limpa para as seções de conteúdo */
     .main-content {
-        max-width: 800px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
+    
     .botanica-titulo {
-        grid-column: span 2;
-        font-size: 2.3rem;
+        font-size: 2.5rem;
     }
+    
     .image-container {
-        grid-column: span 2;
-        max-width: 650px;
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 30px;
     }
+    
     .main-image {
-        height: 400px; /* imagem maior na versão Desktop */
+        height: 380px;
     }
+
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
