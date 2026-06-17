@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TAG DO FAVICON (LOGO DO PROJETO) -->
+    <link rel="shortcut icon" href="caminho_do_seu_favicon.ico" type="image/x-icon">
+    <title>CodIF - Pitangueira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER: Logos e Nome do Projeto -->
+    <header class="main-header">
+        <!-- COLOQUE O LINK DO LOGO DO PROJETO AQUI -->
+        <img src="/favicon/logo-projeto.png" alt="Logo CodIF" class="logo-left">
+        
+        <h1>CodIF</h1>
+        
+        <!-- COLOQUE O LINK DO LOGO DO CAMPUS AQUI -->
+        <img src="/favicon/logo-campus.png" alt="Logo IF" class="logo-right">
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (BOTÂNICA) -->
+    <main class="main-content">
+        <h1 class="botanica-titulo">Pitangueira</h1>
+
+        <!-- container da Imagem Principal com o Botão de "+" para mais fotos -->
+        <div class="image-container">
+            <!-- COLOQUE A IMAGEM PRINCIPAL AQUI -->
+            <img src="/img/pitangueira-principal.png" alt="Foto de uma Pitangueira" class="main-image">
+            
+            <button id="btnMaisFotos" class="btn-plus" aria-label="Ver mais imagens">+</button>
+        </div>
+
+        <!-- seções de Informações da Planta -->
+        <article class="info-section">
+            <h2>Identificação da Espécie</h2>
+            <p><strong>Nome Popular:</strong> Pitangueira, Pitanga</p>
+            <p><strong>Nome Científico:</strong> <em>Eugenia uniflora L.</em></p>
+            <p><strong>Família Botânica:</strong> Myrtaceae</p>
+        </article>
+
+        <article class="info-section">
+            <h2>Origem</h2>
+            <p><strong>Local de Origem/Bioma:</strong> Nativa da Mata Atlântica (Brasil).</p>
+            <p><strong>Classificação:</strong> Nativa.</p>
+            <p><strong>Distribuição Atual:</strong> Encontrada em quase todo o território brasileiro e introduzida em várias regiões tropicais do mundo.</p>
+        </article>
+
+        <article class="info-section">
+            <h2>Características Gerais</h2>
+            <p>Árvore de pequeno a médio porte (pode atingir de 2 a 12 metros de altura). Possui copa densa, folhas pequenas, verdes e brilhantes que exalam aroma característico quando amassadas. Suas flores são brancas e hermafroditas.</p>
+        </article>
+
+        <article class="info-section">
+            <h2>Cuidados, Importância e Observações</h2>
+            <p><strong>Manutenção:</strong> Aprecia sol pleno e solo úmido, mas bem drenado. É resistente a podas de formação.</p>
+            <p><strong>Pragas Comuns:</strong> Mosca-das-frutas (ataca diretamente as pitangas) e cochonilhas nas folhas.</p>
+            <p><strong>Importância Ecológica:</strong> Fundamental na recuperação de áreas degradadas, pois atrai grande quantidade de pássaros e pequenos mamíferos dispersores de sementes.</p>
+        </article>
+
+        <article class="info-section">
+            <h2>Curiosidades</h2>
+            <p>O nome "Pitanga" vem do tupi-guarani <em>pytang</em>, que significa "vermelho tinto", em referência à cor do fruto maduro. Além do consumo dos frutos, suas folhas são muito utilizadas na medicina popular para chás.</p>
+        </article>
+    </main>
+
+    <!-- SOBRE O PROJETO -->
+    <section class="about-section">
+        <h2>Sobre o CodIF</h2>
+        <p>O CodIF é uma iniciativa de catalogação botânica do campus através de QR Codes, permitindo o acesso rápido à informação e promovendo a educação ambiental tecnológica.</p>
+    </section>
+
+    <footer class="main-footer">
+        <p>CodIF &copy; 2026 | Instituto Federal Campus Salto</p>
+    </footer>
+
+    <!-- MODAL (SOBREPOSIÇÃO) PARA MAIS IMAGENS -->
+    <div id="modalImagens" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Galeria da Pitangueira</h3>
+            <div class="gallery-grid">
+                <!-- COLOQUE AS IMAGENS DA GALERIA ABAIXO -->
+                <img src="/img/foto1.png" alt="Detalhe das folhas">
+                <img src="/img/foto2.png" alt="Foto da pitangueira">
+                <img src="/img/foto3.png" alt="Foto da pitangueira 2">
+                <!-- <img src="foto4.jpg" alt="Fruto maduro">
+                <img src="foto5.jpg" alt="Tronco da árvore"> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
