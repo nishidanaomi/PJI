@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TAG DO FAVICON (LOGO DO PROJETO) -->
     <link rel="shortcut icon" href="/favicon/logo-codif.png" type="image/x-icon">
     <title>CodIF - Pitangueira</title>
     <link rel="stylesheet" href="style.css">
@@ -13,28 +12,25 @@
 <body>
 
     <!-- HEADER -->
-    <header class="main-header">
-        <!-- COLOQUE O LINK DO LOGO DO PROJETO AQUI -->
-        <div class="header-left"></div>
-            <img src="/favicon/logo-codif.png" alt="Logo CodIF" class="logo-left">
-            <span class="project-title">CodIF</span>
-        </div>
+<header class="main-header">
+    <div class="header-left">
+        <img src="/favicon/logo-codif.png" alt="Logo CodIF" class="logo-left">
+        <span class="project-title">CodIF</span>
+    </div>
 
-        <nav class="header-nav">
-            <a href="#">Início</a>
-            <a href="#identificacao">Espécies</a>
-            <a href="#sobre">Sobre Nós</a>
-        </nav>
+    <nav class="header-nav">
+        <a href="#">Início</a>
+        <a href="#identificacao">Espécies</a>
+        <a href="#sobre">Sobre Nós</a>
+    </nav>
 
-        <!-- COLOQUE O LINK DO LOGO DO CAMPUS AQUI -->
-        <img src="/favicon/logo-ifsp.png" alt="Logo IF" class="logo-right">
-    </header>
+    <img src="/favicon/logo-ifsp.png" alt="Logo IF" class="logo-right">
+</header>
 
     <!-- CONTEÚDO PRINCIPAL (BOTÂNICA) -->
     <main class="main-content">
         <h1 class="botanica-titulo">Pitangueira</h1>
 
-        <!-- container da Imagem Principal com o Botão de "+" para mais fotos -->
         <div class="image-container">
             <!-- COLOQUE A IMAGEM PRINCIPAL AQUI -->
             <img src="/img/pitangueira-principal.png" alt="Foto de uma Pitangueira" class="main-image">
@@ -42,7 +38,7 @@
             <button id="btnMaisFotos" class="btn-plus" aria-label="Ver mais imagens">+</button>
         </div>
 
-        <!-- seções de Informações da Planta -->
+        <!-- SEÇÕES DE INFORMAÇÕES DA PLANTA -->
         <article id="identificacao" class="info-section">
             <h2>Identificação da Espécie</h2>
             <p><strong>Nome Popular:</strong> Pitangueira, Pitanga</p>
@@ -83,7 +79,6 @@
         </article>
     </main>
 
-    <!-- SOBRE O PROJETO -->
     <section id="sobre" class="about-section">
         <h2>Sobre o CodIF</h2>
         <p>O CodIF é uma iniciativa de catalogação botânica do campus através de QR Codes, permitindo o acesso rápido à
@@ -94,7 +89,7 @@
         <p>CodIF &copy; 2026 | Instituto Federal Campus Salto</p>
     </footer>
 
-    <!-- MODAL (SOBREPOSIÇÃO) PARA MAIS IMAGENS -->
+    <!-- MODAL PARA MAIS IMAGENS -->
     <div id="modalImagens" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -104,8 +99,6 @@
                 <img src="/img/foto1.png" alt="Detalhe das folhas">
                 <img src="/img/foto2.png" alt="Foto da pitangueira">
                 <img src="/img/foto3.png" alt="Foto da pitangueira 2">
-                <!-- <img src="foto4.jpg" alt="Fruto maduro">
-                <img src="foto5.jpg" alt="Tronco da árvore"> -->
             </div>
         </div>
     </div>

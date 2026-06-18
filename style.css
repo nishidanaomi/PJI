@@ -17,6 +17,7 @@ html {
 }
 
 /* --- HEADER --- */
+
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -27,6 +28,9 @@ html {
     position: sticky;
     top: 0;
     z-index: 10;
+    font-size: 1.3rem;
+    color: #2e7d32; /* Verde Botânico institucional */
+    font-weight: 700;
 }
 
 .header-left {
@@ -240,33 +244,26 @@ html {
 @media (min-width: 768px) {
     
     .main-header {
-        /* Define uma margem idêntica de 40px para a esquerda e para a direita */
-        padding: 15px 40px !important; 
-        display: flex !important;
-        justify-content: space-between !important; 
-        align-items: center !important;
+        padding: 15px 40px;
     }
     
-    /* Bloco Esquerdo: Ocupa exatamente 1/3 do menu e cola seu conteúdo na parede esquerda */
+    /* Bloco Esquerdo: Ocupa 1/3 e alinha à esquerda */
     .header-left {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        gap: 12px; 
-        flex: 1 !important; 
-        justify-content: flex-start !important;
+        flex: 1; 
+        justify-content: flex-start;
     }
 
     .project-title {
         font-size: 1.6rem;
     }
 
-    /* Bloco Central: Ocupa exatamente 1/3 do menu e distribui as âncoras no centro absoluto */
+    /* Bloco Central: Ocupa 1/3 e centraliza perfeitamente */
     .header-nav {
-        display: flex !important;
-        gap: 40px; /* Espaço firme entre os links */
-        flex: 1 !important;
-        justify-content: center !important;
+        display: flex;
+        gap: 40px;
+        flex: 1;
+        justify-content: center;
+        font-size: 1.8rem;
     }
     
     .header-nav a {
@@ -282,15 +279,13 @@ html {
         transform: translateY(-1px);
     }
     
-    /* Bloco Direito: Ocupa exatamente 1/3 do menu e empurra a imagem para colar na parede direita */
     .logo-right {
-        display: block !important;
-        flex: 1 !important; 
-        object-fit: contain !important;
-        margin-left: auto !important; /* Força o alinhamento na extremidade direita */
+        display: block;
+        flex: 1; 
+        align-self: center;
+        object-position: right;
     }
 
-    /* Configuração vertical limpa para as seções de conteúdo */
     .main-content {
         max-width: 700px;
         display: flex;
