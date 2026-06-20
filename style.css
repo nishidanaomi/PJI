@@ -60,6 +60,9 @@ html {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.header-left a {
     text-decoration: none;
 }
 
