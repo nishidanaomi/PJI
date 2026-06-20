@@ -1,3 +1,26 @@
+:root {
+    /* --- CORES PRINCIPAIS (IDENTIDADE VISUAL) --- */
+    --cor-primaria-verde: #2e7d32;     /* Verde Botânico Institucional */
+    --cor-secundaria-verde: #1b5e20;   /* Verde Escuro para destaques/títulos */
+    --cor-acento-verde: #81c784;       /* Verde Claro para bordas e detalhes */
+    --cor-fundo-suave: #e8f5e9;        /* Verde Menta Muito Claro (Ex: Seção Sobre) */
+    /* --- TONS NEUTROS E TEXTOS --- */
+    --cor-texto-escuro: #333;       /* Cinza Escuro para leitura principal */
+    --cor-texto-medio: #666;        /* Cinza Médio para elementos secundários */
+    --cor-branco: #ffffff;             /* Branco puro para fundos e textos contrastantes */
+    /* --- FUNDOS DE PÁGINA E BORDAS --- */
+    --cor-fundo-pagina: #f7f9f6;       /* Tom levemente esverdeado/cinza moderno */
+    --cor-borda-suave: #c8e6c9;        /* Verde Pastel Claro para divisórias */
+    /* --- TRANSPARÊNCIAS E SOMBRAS (RGBA) --- */
+    --sombra-sutil: rgba(0, 0, 0, 0.05);   /* 5% de opacidade (Header e Cards) */
+    --sombra-media: rgba(0, 0, 0, 0.1);    /* 10% de opacidade (Imagem Principal) */
+    --sombra-botao: rgba(0, 0, 0, 0.2);    /* 20% de opacidade (Botão Topo) */
+    --sombra-destaque: rgba(0, 0, 0, 0.3); /* 30% de opacidade (Botão Mais) */
+    --fundo-modal: rgba(0, 0, 0, 0.7);     /* 70% de opacidade (Sobreposição do Modal) */
+    /* --- FONTE PADRÃO DO DISPOSITIVO PARA ECONOMIZAR NAS REQUISIÇÕES (INTERNET LENTA) --- */
+    --fonte: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,10 +28,10 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* fonte nativa do celular/computador para economizar nas requisições poupando internet lenta */
+    font-family: var(--fonte);
     line-height: 1.6;
-    color: #333;
-    background-color: #f7f9f6; /* tom levemente esverdeado/cinza, bem moderno */
+    color: var(--cor-texto-escuro);
+    background-color: var(--cor-fundo-pagina);
 }
 
 html {
@@ -22,14 +45,14 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: var(--cor-branco);
     padding: 10px 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px var(--sombra-sutil);
     position: sticky;
     top: 0;
     z-index: 10;
     font-size: 1.3rem;
-    color: #2e7d32; /* Verde Botânico institucional */
+    color: var(--cor-primaria-verde);
     font-weight: 700;
 }
 
@@ -40,13 +63,9 @@ html {
     text-decoration: none;
 }
 
-.header-right {
-
-}
-
 .project-title {
     font-size: 1.3rem;
-    color: #2e7d32;
+    color: var(--cor-primaria-verde);
     font-weight: 700;
 }
 
@@ -71,7 +90,7 @@ html {
 
 .botanica-titulo {
     font-size: 1.8rem;
-    color: #1b5e20;
+    color: var(--cor-secundaria-verde);
     margin-bottom: 15px;
     text-align: center;
 }
@@ -84,7 +103,7 @@ html {
     margin: 0 auto 25px auto;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px var(--sombra-media);
 }
 
 .main-image {
@@ -102,13 +121,13 @@ html {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #2e7d32;
+    background-color: var(--cor-primaria-verde);
     color: white;
     border: none;
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px var(--sombra-destaque);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,18 +135,18 @@ html {
 
 /* blocos de Informação */
 .info-section {
-    background: #ffffff;
+    background: var(--cor-branco);
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px var(--sombra-sutil);
 }
 
 .info-section h2 {
     font-size: 1.1rem;
-    color: #2e7d32;
+    color: var(--cor-primaria-verde);
     margin-bottom: 8px;
-    border-left: 4px solid #81c784;
+    border-left: 4px solid var(--cor-acento-verde);
     padding-left: 8px;
 }
 
@@ -138,15 +157,15 @@ html {
 
 /* --- SEÇÃO SOBRE --- */
 .about-section {
-    background-color: #e8f5e9;
+    background-color: var(--cor-fundo-suave);
     padding: 20px 15px;
     text-align: center;
-    border-top: 1px solid #c8e6c9;
+    border-top: 1px solid var(--cor-borda-suave);
 }
 
 .about-section h2 {
     font-size: 1.2rem;
-    color: #1b5e20;
+    color: var(--cor-secundaria-verde);
     margin-bottom: 8px;
 }
 
@@ -158,7 +177,7 @@ html {
 
 /* --- FOOTER --- */
 .main-footer {
-    background-color: #2e7d32;
+    background-color: var(--cor-primaria-verde);
     color: white;
     text-align: center;
     padding: 15px;
@@ -173,12 +192,12 @@ html {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #1b5e20;
+    background-color: var(--cor-secundaria-verde);
     color: white;
     border: none;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px var(sombra-botao);
     display: none; /* Escondido por padrão via JS */
     align-items: center;
     justify-content: center;
@@ -187,7 +206,7 @@ html {
 }
 
 .btn-top:hover {
-    background-color: #2e7d32;
+    background-color: var(--cor-primaria-verde);
 }
 
 /* --- MODAL DA GALERIA (SOBREPOSIÇÃO) --- */
@@ -198,7 +217,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--fundo-modal);
     z-index: 100;
     justify-content: center;
     align-items: center;
@@ -223,12 +242,12 @@ html {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    color: #666;
+    color: var(--cor-texto-medio);
 }
 
 .modal-content h3 {
     margin-bottom: 15px;
-    color: #1b5e20;
+    color: var(--cor-secundaria-verde);
 }
 
 /* Grid de fotos secundárias */
@@ -272,7 +291,7 @@ html {
     }
     
     .header-nav a {
-        color: #333;
+        color: var(--cor-texto-escuro);
         text-decoration: none;
         font-weight: 500;
         transition: color 0.2s, transform 0.2s;
@@ -280,7 +299,7 @@ html {
     }
     
     .header-nav a:hover {
-        color: #2e7d32;
+        color: var(--cor-primaria-verde);
         transform: translateY(-1px);
     }
     
