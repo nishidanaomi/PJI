@@ -37,6 +37,11 @@ html {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
+}
+
+.header-right {
+
 }
 
 .project-title {
